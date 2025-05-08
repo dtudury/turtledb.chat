@@ -1,0 +1,24 @@
+{
+  "name": "turtledb.chat",
+  "version": "0.0.0",
+  "description": "basic (very basic) chat using hardcoded publicKeys",
+  "main": "chat.js",
+  "scripts": {
+    "start": "source .env && turtledb-com  -i -o turtledb.com -k cv6t981m0a2ou7fil4f88ujf6kpj2lojceycv1gdcq23wlzqi2 --disable-s3 --username $TURTLEDB_USERNAME --password $TURTLEDB_PASSWORD -n home -p 8080 -w home",
+    "offline": "source .env && turtledb-com -i -k cv6t981m0a2ou7fil4f88ujf6kpj2lojceycv1gdcq23wlzqi2 --disable-s3 --username $TURTLEDB_USERNAME --password $TURTLEDB_PASSWORD -n home -p 8080 -w home --insecure --https",
+    "test": "npx turtledb-com test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtudury/turtledb.chat.git"
+  },
+  "author": "David Tudury <david.tudury@gmail.com>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/dtudury/turtledb.chat/issues"
+  },
+  "homepage": "https://github.com/dtudury/turtledb.chat#readme",
+  "dependencies": {
+    "turtledb-com": "^0.2.9"
+  }
+}
